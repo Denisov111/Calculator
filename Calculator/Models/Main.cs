@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Windows.Media;
 using Calculator.Enums;
-using Calculator.Themes;
-using ControlzEx.Theming;
 using EasyMvvm.Core;
 
 namespace Calculator.Models
@@ -94,11 +90,6 @@ namespace Calculator.Models
         public void Back()
         {
             InputString = InputString?.Remove(InputString.Length - 1);
-            System.Collections.Generic.List<AppThemeMenuData> AppThemes = ThemeManager.Current.Themes
-                                         .GroupBy(x => x.BaseColorScheme)
-                                         .Select(x => x.First())
-                                         .Select(a => new AppThemeMenuData { Name = a.BaseColorScheme, BorderColorBrush = a.Resources["MahApps.Brushes.ThemeForeground"] as Brush, ColorBrush = a.Resources["MahApps.Brushes.ThemeBackground"] as Brush })
-                                         .ToList();
         }
 
         /// <summary>
