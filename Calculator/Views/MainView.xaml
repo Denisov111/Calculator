@@ -1,0 +1,87 @@
+﻿<mah:MetroWindow x:Class="Calculator.Views.MainView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:Calculator.Views"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 mc:Ignorable="d"
+                 Title="MainView"
+                 Height="450"
+                 Width="300">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}"
+               BasedOn="{StaticResource MahApps.Styles.Button.Square}">
+            <Setter Property="FontFamily"
+                    Value="Roboto" />
+            <Setter Property="FontSize"
+                    Value="30" />
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--#region Результат-->
+
+        <Grid Margin="5"
+              Grid.ColumnSpan="4">
+            <TextBlock />
+        </Grid>
+
+        <!--#endregion Результат-->
+
+        <!--#region Ввод-->
+        
+        <Border Margin="10"
+                BorderThickness="1"
+                BorderBrush="{StaticResource MahApps.Brushes.Accent}"
+                Grid.ColumnSpan="4"
+                Grid.Row="1">
+            <Grid Grid.ColumnSpan="4">
+                <TextBlock />
+            </Grid>
+        </Border>
+
+        <!--#endregion Ввод-->
+
+        <!--region 1-я строка кнопок -->
+
+        <Button Content="1" Grid.Row="2"
+                Style="{StaticResource MahApps.Styles.Button.Square}" Margin="10"/>
+
+        <!--endregion 1-я строка кнопок -->
+
+        <!--region 2-я строка кнопок -->
+
+        <!--endregion 2-я строка кнопок -->
+
+        <!--region 3-я строка кнопок -->
+
+        <!--endregion 3-я строка кнопок -->
+
+        <!--region 4-я строка кнопок -->
+
+        <!--endregion 4-я строка кнопок -->
+
+        <!--region 5-я строка кнопок -->
+
+        <!--endregion 5-я строка кнопок -->
+
+    </Grid>
+</mah:MetroWindow>
